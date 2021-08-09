@@ -11,8 +11,8 @@ export function shuffleArray(array) {
 
 export function getAllMultiplicationMathProblems(): MultiplicationMath[] {
   const results = [];
-  for (let i = 1; i++; i < 10) {
-    for (let j = 1; j++; j < 10) {
+  for (let i = 1; i < 10; i++) {
+    for (let j = 1; j < 10; j++) {
       results.push({
         first: i,
         second: j,
