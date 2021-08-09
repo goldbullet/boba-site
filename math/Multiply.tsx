@@ -1,5 +1,12 @@
 import React from 'react';
-import { Text, Box, Input, FormControl, FormLabel } from '@chakra-ui/react';
+import {
+  Text,
+  Box,
+  Input,
+  FormControl,
+  FormLabel,
+  Stack
+} from '@chakra-ui/react';
 import { getAllMultiplicationMathProblems } from '../utils';
 
 export default () => {
@@ -8,12 +15,12 @@ export default () => {
     <FormControl>
       <Box p={10}>
         {problems.map(({ first, second, operator }, i) => (
-          <Text key={`math-${i}`} p={1} fontSize="2xl">
-            <FormLabel>
+          <Stack key={`math-${i}`} p={1} direction="row">
+            <FormLabel fontSize="2xl" width={100}>
               {first} {operator} {second} =
             </FormLabel>
-            <Input variant="filled" />
-          </Text>
+            <Input variant="filled" width={20} />
+          </Stack>
         ))}
       </Box>
     </FormControl>
