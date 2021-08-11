@@ -4,7 +4,7 @@ import { Math } from '../utils';
 
 export default ({ first, operator, second }: Math) => {
   return (
-    <HStack spacing="2px" fontSize="2xl" p={1}>
+    <HStack spacing="2px" fontSize="3xl" p={1}>
       <Box width={6}>
         <Text>{first}</Text>
       </Box>

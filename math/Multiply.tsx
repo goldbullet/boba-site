@@ -8,10 +8,9 @@ export default () => {
   return (
     <Grid
       autoFlow="row dense"
-      templateColumns="repeat(3, 1fr)"
-      gap={0.1}
+      templateColumns="repeat(4, 1fr)"
       p={10}
-      width={800}
+      width={1000}
     >
       {problems.map((math, i) => (
         <MathProblem key={`math-${i}`} {...math} />
