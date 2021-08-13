@@ -8,10 +8,7 @@ function renderProblemset() {
     <Grid
       autoFlow="row dense"
       templateColumns="repeat(4, 1fr)"
-      mt={10}
-      ml={10}
-      mr={10}
-      mb={10}
+      m={10}
       width={1000}
       sx={{
         '@page': { margin: 0 },
