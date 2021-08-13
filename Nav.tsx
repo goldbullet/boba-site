@@ -80,24 +80,16 @@ export default function WithSubnavigation() {
           direction={'row'}
           spacing={6}>
           <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Sign In
-          </Button>
-          <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
             bg={'teal.400'}
-            href={'#'}
+            onClick={window.print}
             _hover={{
               bg: 'teal.300',
             }}>
-            Sign Up
+            Print
           </Button>
         </Stack>
       </Flex>
