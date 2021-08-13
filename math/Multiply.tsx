@@ -8,7 +8,7 @@ function renderProblemset() {
     <Grid
       autoFlow="row dense"
       templateColumns="repeat(4, 1fr)"
-      p={10}
+      m={10}
       width={1000}
       sx={{
         '@media print': {
@@ -25,7 +25,7 @@ function renderProblemset() {
 
 export default () => {
   return (
-    <Grid autoFlow="column dense">
+    <Grid autoFlow="row dense">
       {renderProblemset()}
       {renderProblemset()}
     </Grid>
