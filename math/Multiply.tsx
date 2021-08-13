@@ -8,9 +8,13 @@ function renderProblemset() {
     <Grid
       autoFlow="row dense"
       templateColumns="repeat(4, 1fr)"
-      m={10}
+      mt={10}
+      ml={10}
+      mr={10}
+      mb={10}
       width={1000}
       sx={{
+        '@page': { margin: 0 },
         '@media print': {
           'page-break-after': 'always'
         }
@@ -25,7 +29,7 @@ function renderProblemset() {
 
 export default () => {
   return (
-    <Grid autoFlow="row dense">
+    <Grid autoFlow="row dense" gap={100}>
       {renderProblemset()}
       {renderProblemset()}
     </Grid>
