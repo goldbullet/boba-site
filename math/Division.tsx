@@ -1,4 +1,7 @@
 import React from 'react';
-import { Text } from '@chakra-ui/react';
+import { getAllDivisionMathProblems } from '../utils';
+import PrintLayout from './PrintLayout';
 
-export default () => <Text>Division</Text>;
+export default () => {
+  return <PrintLayout getProblems={getAllDivisionMathProblems} />;
+};

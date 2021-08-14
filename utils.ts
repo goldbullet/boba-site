@@ -9,19 +9,43 @@ export function shuffleArray(array) {
   }
 }
 
-export function getAllMultiplicationMathProblems(): MultiplicationMath[] {
+export function createMathProblems(operator: MathOperator) {
   const results = [];
   for (let i = 1; i < 10; i++) {
     for (let j = 1; j < 10; j++) {
       results.push({
         first: i,
         second: j,
-        operator: '×'
+        operator
       });
     }
   }
   shuffleArray(results);
   return results;
+}
+
+export function getAllAdditionMathProblems(): MultiplicationMath[] {
+  return createMathProblems('+');
+}
+
+export function getAllSubtractionMathProblems(): MultiplicationMath[] {
+  return createMathProblems('-');
+}
+
+export function getAllMultiplicationMathProblems(): MultiplicationMath[] {
+  return createMathProblems('×');
+}
+
+export function getAllDivisionMathProblems(): DivisionMath[] {
+  const multiplicationProblems = getAllMultiplicationMathProblems();
+  return multiplicationProblems.map(({ first, second }) => {
+    const newFirst = first * second;
+    return {
+      first: newFirst,
+      second,
+      operator: '÷'
+    };
+  });
 }
 
 export type MathOperator = '×' | '÷' | '+' | '-';

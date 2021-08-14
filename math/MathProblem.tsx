@@ -5,16 +5,16 @@ import { Math } from '../utils';
 export default ({ first, operator, second }: Math) => {
   return (
     <HStack spacing="2px" fontSize="3xl" p={1} fontWeight={600}>
-      <Box width={6}>
+      <Box width={10} textAlign="right">
         <Text>{first}</Text>
       </Box>
-      <Box width={6}>
+      <Box width={6} textAlign="center">
         <Text>{operator}</Text>
       </Box>
-      <Box width={6}>
+      <Box width={10}>
         <Text>{second}</Text>
       </Box>
-      <Box width={10}>
+      <Box width={8}>
         <Text>=</Text>
       </Box>
       <Box width={20}>

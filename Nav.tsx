@@ -24,7 +24,7 @@ import {
 } from '@chakra-ui/icons';
 import {Link as RouterLink } from 'react-router-dom';
 
-export default function WithSubnavigation() {
+export default function WithSubnavigation({refresh}: {refresh: () => any}) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -79,6 +79,15 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
+          <Button
+            display={{ base: 'none', md: 'inline-flex' }}
+            fontSize={'sm'}
+            fontWeight={600}
+            colorScheme={'teal'}
+            onClick={refresh}
+            variant="outline">
+            Refresh
+          </Button>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
@@ -258,6 +267,16 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Math',
     children: [
+      {
+        label: 'Addition',
+        subLabel: 'Randomly generated working sheet for addition',
+        href: '/math/addition',
+      },
+      {
+        label: 'Subtraction',
+        subLabel: 'Randomly generated working sheet for subtraction',
+        href: '/math/subtraction',
+      },
       {
         label: 'Multiplication',
         subLabel: 'Randomly generated working sheet for multiplication',
