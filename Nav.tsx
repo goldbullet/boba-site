@@ -16,7 +16,9 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react';
+import { MdPrint } from "react-icons/md"
 import {
+  RepeatIcon,
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
@@ -80,6 +82,7 @@ export default function WithSubnavigation({refresh}: {refresh: () => any}) {
           direction={'row'}
           spacing={6}>
           <Button
+            leftIcon={<RepeatIcon/>}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
@@ -89,6 +92,7 @@ export default function WithSubnavigation({refresh}: {refresh: () => any}) {
             Refresh
           </Button>
           <Button
+            leftIcon={<Icon as={MdPrint}/>}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
